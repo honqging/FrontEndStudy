@@ -1,0 +1,63 @@
+<style type="text/css">
+	input{
+		position: absolute;
+		left: -9999px;
+	}
+
+	/*input:checked + label::before{
+		border: 1px grey solid;
+	}*/
+
+	label{
+		width: 100px;
+		display: block;
+		position: relative;
+		margin: 20px;
+		padding: 15px 30px 15px 62px;
+		border: 3px solid white;
+		border-radius: 100px;
+		color: white;
+		background-color: #389cff;
+		box-shadow: 0 0 20px grey;
+		/*cursor: pointer;*/
+		font-weight: bold;
+		transition: background-color .2s, box-shadow .2s;
+	}
+
+	label::before{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 10px;
+		bottom: 10px;
+		left: 10px;
+		right: 10px;
+		width: 27px;
+		border: 3px solid white;
+		border-radius: 100px;
+		transition: background-color .2s;
+	}
+
+	label:hover, input:focus + label {
+	  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+	}
+
+	input:checked + label {
+	  background-color: #14c814;
+	}
+
+	input:checked + label::before {
+	  background-color: white;
+	}
+</style>
+
+<div class="container">
+	<input id="toggle1" type="checkbox">
+	<label for="toggle1">see you</label>
+
+	<input id="toggle2" type="checkbox">
+	<label for="toggle2">see you</label>
+
+	<input id="toggle3" type="checkbox">
+	<label for="toggle3">see you</label>
+</div>
